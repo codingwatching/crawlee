@@ -43,6 +43,10 @@ export class PuppeteerPlugin extends BrowserPlugin<
             }
         }
 
+        if (launchOptions!.headless === true) {
+            launchOptions!.headless = 'new';
+        }
+
         let browser: PuppeteerTypes.Browser;
 
         {
